@@ -1,18 +1,21 @@
 <footer class="site-footer">
-  <div class="wrapper">
     <h2 class="footer-heading">{{ site.title }}</h2>
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+        <div class="footer-col footer-col-1">
+            <ul class="contact-list">
+                <li>{{ site.address }}</li>
+                <li>Office: {{ site.office_num }}</li>
+                <li>Fax: {{ site.fax_num }}</li>
+                <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                <li class="google-map">
+                    <iframe src="{{ site.address_gmaps }}" width="150" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-col footer-col-2">
+            <ul class="affiliate-list">
+                <li><img src="/imgs/ethics-registered-member-badge.png" width="160" alt="Ethics Registered Member"></img></li>
+            </ul>
+        </div>
     </div>
-
-  </div>
-
 </footer>

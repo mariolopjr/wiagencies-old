@@ -7,6 +7,10 @@
 
 # Site settings
 title: World Insurance Agency
+address: 8 Beverly Hills Blvd. Beverly Hills, FL 34465
+address_gmaps: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3492.042151253318!2d-82.46144578510695!3d28.92679878230266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e86c1de1623c11%3A0x3393a53de0c0334e!2s8+Beverly+Hills+Blvd%2C+Beverly+Hills%2C+FL+34465!5e0!3m2!1sen!2sus!4v1467495978963
+office_num: (352) 462-0414
+fax_num: (888) 413-6642
 email: wiagencies@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Covering all of your insurance needs: auto, home, motocycle, commerical, and
