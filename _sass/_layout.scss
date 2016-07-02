@@ -2,13 +2,8 @@
  * Site Container
  */
 .container-fluid {
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
-.container-fluid > * {
-    opacity: 1;
 }
 
 /**
@@ -17,6 +12,8 @@
 .site-header {
     border-top: 5px solid $brand-color;
     min-height: 56px;
+    padding-right: 1rem;
+    padding-left: 1rem;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -29,7 +26,6 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
-    left: 2rem;
 
     &,
     &:visited {
