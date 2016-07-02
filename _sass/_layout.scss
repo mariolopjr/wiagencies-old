@@ -1,4 +1,17 @@
 /**
+ * Site Container
+ */
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid > * {
+    opacity: 1;
+}
+
+/**
  * Site header
  */
 .site-header {
