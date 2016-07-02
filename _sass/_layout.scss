@@ -100,6 +100,40 @@
     width:         calc(60% - (#{$spacing-unit} / 2));
 }
 
+.site-attributions {
+    height: 25px;
+}
+
+.copyright,
+.techmunchies {
+    font-size: 15px;
+    line-height: 15px;
+    top: 0;
+    color: $grey-color;
+    display: inline-block;
+    @extend %clearfix;
+}
+
+.techmunchies {
+
+    margin-left: $spacing-unit;
+
+    & > a {
+        color: $grey-color;
+
+        &:hover {
+            text-decoration: none;
+            background-color: rgba(150, 158, 172, 0.4);
+        }
+
+        & > img {
+            width: 10px;
+            height: 10px;
+            vertical-align: baseline;
+        }
+    }
+}
+
 @include media-query($on-laptop) {
     .footer-col-1,
     .footer-col-2 {
