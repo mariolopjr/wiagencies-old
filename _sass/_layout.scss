@@ -34,11 +34,9 @@
     &,
     &:visited {
         color: $text-color;
-
     }
 
     &:hover {
-        color: $brand-color;
         text-decoration: none;
     }
 }
