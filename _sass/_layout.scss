@@ -60,6 +60,7 @@
     @include media-query-orientation(landscape) {
         .site-title {
             font-size: 32px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
     }
 }
@@ -75,6 +76,7 @@
         .site-title {
             font-size: 32px;
             float: none;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
         }
     }
 }
@@ -155,9 +157,6 @@
 }
 
 .techmunchies {
-
-    margin-left: $spacing-unit;
-
     & > a {
         color: $grey-color;
 
@@ -179,25 +178,24 @@
         .site-footer {
             margin-top: 15px;
         }
+
+        .footer-col-1 {
+            width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+            width:         calc(45% - (#{$spacing-unit} / 2));
+        }
+
+        .footer-col-2 {
+            margin-left: -10px;
+            width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+            width:         calc(45% - (#{$spacing-unit} / 2));
+        }
+
+        .google-map {
+            margin-top: -7.7rem;
+            margin-left: 32rem;
+        }
     }
 }
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
 
 
 /**
