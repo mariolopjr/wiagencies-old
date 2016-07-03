@@ -197,6 +197,30 @@
     }
 }
 
+@include media-query($on-iphone-6s) {
+    @include media-query-orientation(portrait) {
+        .site-footer {
+            margin-top: 15px;
+        }
+
+        .footer-col-1 {
+            width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+            width:         calc(45% - (#{$spacing-unit} / 2));
+        }
+
+        .footer-col-2 {
+            margin-left: 35px;
+            width: -webkit-calc(45% - (#{$spacing-unit} / 2));
+            width:         calc(45% - (#{$spacing-unit} / 2));
+        }
+
+        .google-map {
+            margin-left: 70%;
+            margin-top: 20px;
+        }
+    }
+}
+
 
 /**
  * Page content
