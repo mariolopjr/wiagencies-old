@@ -17,7 +17,10 @@ $spacing-unit:     30px;
 $text-color:       #fff;
 $background-color: #282C34;
 $background-img: url("/imgs/background-lg.jpg");
+$background-img-iphone-6s: url("/imgs/background-md.jpg");
+$background-img-iphone-6s-p: url("/imgs/background-xs.jpg");
 $background-size: 100% auto;
+$background-repeat: no-repeat;
 $brand-color:      #286090;
 
 $grey-color:       #828282;
@@ -28,6 +31,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 $content-width:    800px;
 
 $on-palm:          600px;
+$on-iphone-6s:     600px;
+$on-iphone-6s-l:   800px;
 $on-laptop:        800px;
 
 
@@ -41,6 +46,12 @@ $on-laptop:        800px;
 // }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin media-query-orientation($orientation) {
+    @media only screen and (orientation: $orientation) {
         @content;
     }
 }

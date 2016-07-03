@@ -6,8 +6,22 @@
     margin-left: auto;
     background-image: $background-img;
     background-size: $background-size;
+    background-repeat: $background-repeat;
     height: 100vh;
     width: 100vw;
+}
+
+@include media-query($on-iphone-6s) {
+    .container-fluid {
+        background-image: $background-img-iphone-6s;
+    }
+
+    @include media-query-orientation(portrait) {
+        .container-fluid {
+            background-size: cover;
+            background-position: center;
+        }
+    }
 }
 
 /**
@@ -39,6 +53,29 @@
 
     &:hover {
         text-decoration: none;
+    }
+}
+
+@include media-query($on-iphone-6s-l) {
+    @include media-query-orientation(landscape) {
+        .site-title {
+            font-size: 32px;
+        }
+    }
+}
+
+@include media-query($on-iphone-6s) {
+    @include media-query-orientation(portrait) {
+        .site-header {
+            padding-right: 0;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .site-title {
+            font-size: 32px;
+            float: none;
+        }
     }
 }
 
@@ -137,6 +174,14 @@
     }
 }
 
+@include media-query($on-iphone-6s-l) {
+    @include media-query-orientation(landscape) {
+        .site-footer {
+            margin-top: 15px;
+        }
+    }
+}
+
 @include media-query($on-laptop) {
     .footer-col-1,
     .footer-col-2 {
@@ -162,13 +207,27 @@
     padding: $spacing-unit 0;
 }
 
-.page-heading {
-    font-size: 20px;
-}
-
 .page-content > .wrapper {
     width: $content-width;
     height: 70vh;
+}
+
+@include media-query($on-iphone-6s-l) {
+    @include media-query-orientation(landscape) {
+        .page-content > .wrapper {
+            width: 80vw;
+            height: 50vh;
+        }
+    }
+}
+
+@include media-query($on-iphone-6s) {
+    @include media-query-orientation(portrait) {
+        .page-content > .wrapper {
+            width: 70vw;
+            height: 70vh;
+        }
+    }
 }
 
 /**
@@ -222,5 +281,50 @@
     &:visited {
         color: $text-color;
         text-decoration: none;
+    }
+}
+
+@include media-query($on-iphone-6s-l) {
+    @include media-query-orientation(landscape) {
+        .top-slogan {
+            font-size: 50px;
+            font-weight: 600;
+            line-height: 50px;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            margin-top: -15px;
+        }
+
+        .bottom-slogan {
+            margin-top: -7px;
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 24px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .sign-up-btn {
+            top: 90px;
+        }
+    }
+}
+
+@include media-query($on-iphone-6s) {
+    @include media-query-orientation(portrait) {
+        .top-slogan {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 40px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .bottom-slogan {
+            margin-top: -7px;
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
     }
 }
