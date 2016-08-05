@@ -1,0 +1,31 @@
+# Require the Docker environment of Ruby 2.1
+image: ruby:2.3.1
+
+# cache bundler into vendor
+cache:
+  paths:
+    - vendor/
+
+before_script:
+  - bundle install --path vendor
+
+# pages job: builds site, and deploys it
+pages:
+  stage: deploy
+  script:
+  - bundle exec jekyll build -d public/
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+test:
+  stage: test
+  script:
+    - bundle exec jekyll build -d test/
+  artifacts:
+    paths:
+      - test
+  except:
+    - master
